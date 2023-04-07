@@ -2,6 +2,8 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Education;
+use App\Entity\Experience;
 use App\Entity\Projects;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -44,5 +46,8 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Projects', 'fas fa-cubes', Projects::class);
+        yield MenuItem::linkToCrud('Experiences', 'fas fa-cubes', Experience::class);
+        yield MenuItem::linkToCrud('Education', 'fas fa-cubes', Education::class);
+
     }
 }
